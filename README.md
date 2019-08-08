@@ -1,5 +1,27 @@
-# strange-attractor-synth
-A synthesizer using strange attractors in signal domain for modulation
+# Strange Attractor Synth
+
+**Find my Audiovisual projects on http://gumroad.com/tmhglnd**
+
+**Consider to become a patron on http://patreon.com/timohoogland**
+
+# About
+
+A synthesizer using Strange Attractors to modulate parameters. The Attractors are generated in the gen~ environement with the codebox. The coördinates of the Attractors are output as a 3-channel signal containing the x, y and z information. The jit.catch~ object captures the coördinates over time to draw them with a jit.gl.path to the OpenGL world.
+
+# Included Attractors
+
+- Lorenz Attractor
+- Lorenz Mod 2 Attractor
+- Aizawa Attractor
+- Arneodo Attractor
+- Burke-Shaw Attractor
+- Chen-Lee Attractor
+- Thomas Attractor
+- Hadley Attractor
+- Halvorsen Attractor
+- Thee-Scroll Unified Chaotic System Attractor
+- Coullet Attractor
+- Dadras Attractor
 
 ## Strange Attractor Formulas
 
@@ -92,7 +114,7 @@ y = y + dt * z;
 z = z + dt * (-a * x - b * y - z + c * pow(x, 3));
 ```
 
-### Burke - Shaw Attractor
+### Burke-Shaw Attractor
 ```
 // dx/dt = -c(x+y)
 // dy/dt = -y-cxz
@@ -123,7 +145,7 @@ y = y + dt * (-x * z + c * y);
 z = z + dt * (x * y - b * z);
 ```
 -->
-### Chen - Lee Attractor
+### Chen-Lee Attractor
 ```
 // dx/dt = ax-yz
 // dy/dt = by+xz
@@ -180,23 +202,6 @@ y = y + dt * (-a*y - 4*z - 4*x - z*z);
 z = z + dt * (-a*z - 4*x - 4*y - x*x);
 ```
 
-### Dadras Attractor
-```
-// dx/dt = y-px+oyz
-// dy/dt = ry-xz+z
-// dz/dt = cxy-sz
-
-p = 3;
-o = 2.7;
-r = 1.7;
-c = 2;
-s = 9;
-
-x = x + dt * ();
-y = y + dt * ();
-z = z + dt * ();
-```
-
 ### Three-Scroll Unified Chaotic System Attractor
 ```
 // dx/dt = a(y-x)+dxz
@@ -228,4 +233,21 @@ d = -1;
 x = x + dt * (y);
 y = y + dt * (z);
 z = z + dt * (a*x + b*y + c*z + d*(x*x*x));
+```
+
+### Dadras Attractor
+```
+// dx/dt = y-px+oyz
+// dy/dt = ry-xz+z
+// dz/dt = cxy-sz
+
+a = 3;
+b = 2.7;
+c = 1.7;
+d = 2;
+f = 9;
+
+x = x + dt * (y - a*x + b*y*z);
+y = y + dt * (c*y - x*z + z);
+z = z + dt * (d*x*y - f*z);
 ```

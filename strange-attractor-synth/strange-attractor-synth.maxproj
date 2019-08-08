@@ -2,7 +2,7 @@
 	"name" : "strange-attractor-synth",
 	"version" : 1,
 	"creationdate" : 3648105523,
-	"modificationdate" : 3648121499,
+	"modificationdate" : 3648124438,
 	"viewrect" : [ 16.0, 77.0, 300.0, 500.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -14,6 +14,19 @@
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
+			}
+
+		}
+,
+		"data" : 		{
+			"attractors.json" : 			{
+				"kind" : "json",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Drive/projects/code/max/major_projects/strange_attractor_synth/strange-attractor-synth/strange-attractor-synth/data",
+					"projectrelativepath" : "./data"
+				}
+
 			}
 
 		}
