@@ -1,0 +1,76 @@
+//==============================================================================
+// strange-attractors.genexpr
+// Algorithms for strange attractors in the signal domain with gen~
+//
+// By Timo Hoogland (c) 2019
+// www.timohoogland.com
+// GNU GPL3 License
+//==============================================================================
+
+/* Description
+Various Strange Attractor algorithm functions that can be used in the gen~ domain on signal rate for synthesis and modulation purposes. Algorithms included:
+
+	- Lorenz Attractor
+	- Chen-Lee
+	- Chua
+	- 
+*/
+
+rrand(lo, hi){
+	return abs(noise()) * (hi-lo) + lo;
+}
+
+strange_attractors(trig, a){
+	attractor = a;
+
+	History x_offset(0);
+	History y_offset(0);
+	History z_offset(0);
+	History gain(0.2);
+
+	History a(10); 
+	History b(28);
+	History c(2.667);
+	//History d(0);
+	// History f(0);
+	// History g(0);
+	History dt(0.01);
+
+	// history allows to restore
+	// previous value back in this variable
+	History x(0.1);
+	History y(0.1);
+	History z(0.1);
+
+	if (trig != 0){
+		isChanged = abs(delta(attractor)) > 0;
+
+		if (isChanged){
+			x_offset = 0;
+			y_offset = 0;
+			z_offset = 0;
+			// random initial position
+			x = rrand(-0.3, 0.3);
+			y = rrand(-0.3, 0.3);
+			z = rrand(-0.3, 0.3);
+		}
+
+		// Lorenz Attractor
+		if (attractor == 1){
+			if (isChanged){
+				dt = 0.005;
+				z_offset = -0.75;
+				gain = 0.03;
+				
+				a = 10;
+				b = 28;
+				c = 8/3;
+			}
+			x = x + dt * (a * (y - x));
+			y = y + dt * (x * (b - z) - y);
+			z = z + dt * (x * y - c * z);
+		}
+	}
+
+	return x, y, z;
+}

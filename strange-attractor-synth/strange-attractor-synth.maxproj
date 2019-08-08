@@ -2,9 +2,9 @@
 	"name" : "strange-attractor-synth",
 	"version" : 1,
 	"creationdate" : 3648105523,
-	"modificationdate" : 3648105564,
-	"viewrect" : [ 50.0, 94.0, 300.0, 500.0 ],
-	"autoorganize" : 1,
+	"modificationdate" : 3648121499,
+	"viewrect" : [ 16.0, 77.0, 300.0, 500.0 ],
+	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
 	"autolocalize" : 0,
@@ -14,6 +14,14 @@
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
+			}
+
+		}
+,
+		"other" : 		{
+			"strange-attractors.genexpr" : 			{
+				"kind" : "genexpr",
+				"local" : 1
 			}
 
 		}
