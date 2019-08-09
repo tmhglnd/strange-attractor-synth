@@ -2,7 +2,7 @@
 	"name" : "strange-attractor-synth",
 	"version" : 1,
 	"creationdate" : 3648105523,
-	"modificationdate" : 3648124438,
+	"modificationdate" : 3648233892,
 	"viewrect" : [ 16.0, 77.0, 300.0, 500.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -14,6 +14,11 @@
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
+			}
+,
+			"modulateParam.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
 			}
 
 		}
@@ -49,7 +54,7 @@
 
 	}
 ,
-	"detailsvisible" : 0,
+	"detailsvisible" : 1,
 	"amxdtype" : 1633771873,
 	"readonly" : 0,
 	"devpathtype" : 0,
