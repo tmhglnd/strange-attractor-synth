@@ -6,7 +6,15 @@
 
 # About
 
-A synthesizer using Strange Attractors to modulate parameters. The Attractors are generated in the gen~ environement with the codebox. The coördinates of the Attractors are output as a 3-channel signal containing the x, y and z information. The jit.catch~ object captures the coördinates over time to draw them with a jit.gl.path to the OpenGL world.
+This patch uses the xyz coordinates of a Strange Attractor chaotic system to modulate parameters from an FM synthesizer with resonant lowpass filter and flanger effects. Various different Strange Attractors are programmed in the gen~ patcher with codebox (such as the famous Lorenz Attractor). The attractor can be selected in the umenu and is displayed in the openGL domain using jit.catch~ and jit.gl.path, and also through 4 phase-correlation scopes showing the x-y, y-z, x-z and distance to origin of the signal. Listening to the pure modulation signal is also possible. The coordinates of the attractor are output from the gen~ as a 3-channel signal.
+
+# Sources
+
+https://en.wikipedia.org/wiki/Lorenz_system
+
+https://en.wikipedia.org/wiki/Multiscroll_attractor
+
+https://www.deviantart.com/chaoticatmospheres/gallery/44050549/strange-attractors
 
 # Included Attractors
 
