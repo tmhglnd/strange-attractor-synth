@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 7,
+			"revision" : 8,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -56,7 +56,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 413.0, 97.0, 153.0, 141.0 ],
+					"patching_rect" : [ 413.0, 97.0, 160.0, 141.0 ],
 					"text" : "An abstraction that receives the modulation signal, scales it to the desired range, and outputs the signal.\n\nIf receive is set to none (0), the signal will be static based on the 3rd argument position"
 				}
 
@@ -137,11 +137,11 @@
 				"box" : 				{
 					"id" : "obj-5",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 45.0, 135.0, 51.0, 22.0 ],
-					"text" : "unjoin 2"
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 45.0, 165.0, 68.0, 22.0 ],
+					"text" : "zl.slice 1"
 				}
 
 			}
@@ -236,7 +236,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 94.0, 210.0, 72.0, 22.0 ],
+					"patching_rect" : [ 94.0, 240.0, 72.0, 22.0 ],
 					"text" : "prepend set"
 				}
 
@@ -248,7 +248,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 94.0, 240.0, 71.0, 22.0 ],
+					"patching_rect" : [ 94.0, 270.0, 71.0, 22.0 ],
 					"text" : "receive~ off"
 				}
 
